@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Inter:wght@400;500&family=Oswald:wght@200;300;400&family=Poppins:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body{
+    color: #D9D9D9;
+    font-family: "Inter", sans-serif;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+nav{
+    display: flex;
+    width: 100%;
+    padding-right: 40px;
+    justify-content: end;
+    align-items: center;
+    height: 80px;
+    background-color: #080716;
+}
+nav ion-icon{
+    display: none;
+}
+nav ul ion-icon{
+    display: none;
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+    gap: 27px;
+    justify-content: end;
+    align-items: center;
+    list-style: none;
+}
+nav ul li a{
+    cursor: pointer;
+    color: #D9D9D9;
+    text-decoration: none;
+    transition: all 0.4s;
+}
+nav ul li a:hover{
+    color: white;
+}
+
+section{
+    color: #080716;
+    margin-top: 40px;
+    margin-left: 40px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto auto auto;
+}
+/*Configuração para imagem usada*/
+section aside{
+    padding-inline: 40px;
+    grid-column: 2/2;
+    grid-row: 1/5;
+}
+
+section .sobre{
+    max-width: 500px;
+    text-align: justify;
+}
+
+/*Configurão da aba sobre*/
+.sobre{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-inline: 10px;
+}
+.sobre h1{
+    font-family: "Poppins", sans-serif;
+    font-size: 40px;
+    border-bottom: 4px solid #080716;
+}
+.sobre p{
+    padding-inline: 10px;
+}
+
+/*Configuração da aba Formação acadêmica*/
+.formacao{
+    grid-column: 1/3;
+    grid-row: 2/5;
+    margin-top: 30px;
+    max-width: 700px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    text-align: justify;
+}
+.formacao h1{
+    font-family: "Poppins", sans-serif;
+    font-size: 40px;
+    border-bottom: 4px solid #080716;
+}
+.formacao ul{
+    padding-left: 30px;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+/*Experiências profissionais*/
+.exp-prof{
+    margin-top: 30px;
+    padding-inline: 20px;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 10px;
+
+}
+.exp-prof h1{
+    font-family: "Poppins", sans-serif;
+    font-size: 40px;
+    border-bottom: 4px solid #080716;
+}
+.exp-prof dl{
+    display: flex;
+    flex-direction: column;
+    margin-inline: auto;
+}
+.exp-prof dt{
+    margin-top: 16px;
+    list-style: lower-roman;
+}
+.exp-prof dd{
+    list-style: circle;
+    margin-top: 10px;
+    padding-inline: 30px;
+}
+
+/*Formação complementar*/
+
+.form-complement{
+    margin-top: 30px;
+    max-width: 580px;
+    padding-inline: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-inline: auto;
+
+}
+.form-complement h1{
+    font-family: "Poppins", sans-serif;
+    font-size: 40px;
+    border-bottom: 4px solid #080716;
+}
+
+footer{
+    color: #080716;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+footer a{
+    font-weight: 700;
+    cursor: pointer;
+    color: #4c4b51;
+    transition: all 0.4s;
+}
+footer a:hover{
+    color: black;
+}
+
+
+
+/*Portabilidade*/
+@media(max-width: 1200px){
+    nav ul li{
+        display: none;
+        margin: 0;
+        padding: 0;
+    }
+    nav ion-icon{
+        cursor: pointer;
+        display: initial;
+        color: #D9D9D9;
+        font-size: 30px;
+        transition: all 0.4s;
+    }
+    nav ion-icon:hover{
+        color: white;
+    }
+    .menu{
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        z-index: 1;
+        animation: fadeIn 0.4s ease-in-out;
+    }
+    .menu ul ion-icon{
+        display: initial;
+        position: relative;
+        top: -27%;
+        left: -3%;
+        margin-left: 550px;
+        
+    }
+    .menu ul{
+        display: flex;
+        flex-direction: column;
+        margin-inline: auto;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    .menu ul li{
+        display: flex;
+        display: initial;
+        width: fit-content;
+        padding: 30px;
+        height: 30px;
+        width: 350px;
+        border-bottom: 1px solid #D9D9D9;
+    }
+    .menu ion-icon{
+        display: none;
+    }
+
+    aside{
+        display: none;
+        transition: all 0.3s;
+    }
+
+    section{
+        display: initial;
+        display: flex;
+        flex-direction: column;
+        margin-inline: auto;
+        gap: 30px;
+    }
+    section .sobre{
+        padding: 0;
+        padding-inline: 20px;
+        margin: 0;
+        margin-block: 50px;
+        margin-inline: auto;
+
+    }
+    .sobre h1{
+        text-align: center;
+    }
+    section .formacao{
+        padding: 0;
+        padding-inline: 20px;
+        margin: 0;
+        margin-inline: auto;
+    }
+    .formacao h1{
+        text-align: center;
+    }
+    section .exp-prof{
+        padding: 0;
+        margin: 0;
+        padding-inline: 20px;
+        margin-inline: auto;
+    }
+    section .exp-prof h1{
+        text-align: center;
+    }
+
+    
+    
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes fadeOut{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
